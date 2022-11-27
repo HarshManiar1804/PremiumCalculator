@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@color/pink_600">
+
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <!--hello  with name-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff">
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/harsh01"/>
+            <TextView
+                android:layout_marginTop="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, "
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/txtHeaderName"
+                 android:textColor="@color/black"
+                 android:layout_marginTop="72dp"
+                 android:layout_marginLeft="80dp"
+                 android:textSize="30dp"
+                 android:textStyle="bold"/>
+            </RelativeLayout>
+            </LinearLayout>
+
+    <!--Plan Choose        -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="   Select Plan"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:id="@+id/rbgPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rbIndividual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Individual"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="26dp"/>
+                    <RadioButton
+                        android:id="@+id/rbHFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HFF"
+                        android:layout_marginLeft="50dp"
+                        android:textSize="26dp"/>
+                </RadioGroup>
+                <Spinner
+                    android:layout_width="350dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/spPlan"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/black"/>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            // amount and member
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="   Amount: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+
+                <Spinner
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spAmount"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="   Members:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+
+                <Spinner
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spMember"/>
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp">
+
+    // calculate
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Members"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Relation" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:text="Age" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="0dp"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Amount" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll1"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp">
+            <TextView
+                    android:id="@+id/txtMainMember"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:editable="false"
+                    android:hint="Owner"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:id="@+id/spAge"/>
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll2"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp">
+
+
+            <EditText
+                    android:id="@+id/member2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                android:maxLength="10"
+                    android:layout_height="wrap_content"
+                    android:text="Member2"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spRelation2"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:id="@+id/spAge2"/>
+
+                <TextView
+                    android:id="@+id/txtAmount2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll3"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp">
+
+
+            <EditText
+                    android:id="@+id/member3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:layout_height="wrap_content"
+                    android:text="Member3"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spRelation3"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spAge3"/>
+
+                <TextView
+                    android:id="@+id/txtAmount3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll4"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp">
+            <EditText
+                    android:id="@+id/member4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:layout_height="wrap_content"
+                    android:text="Member4"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spRelation4"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spAge4"/>
+
+                <TextView
+                    android:id="@+id/txtAmount4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll5"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp">
+
+
+            <EditText
+                    android:id="@+id/member5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Member5"
+                    android:maxLength="10"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spRelation5"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spAge5"/>
+
+                <TextView
+                    android:id="@+id/txtAmount5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll6"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp">
+
+
+            <EditText
+                android:id="@+id/member6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Member6"
+                android:maxLength="10"
+                android:textSize="14dp" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spRelation6"/>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spAge6"/>
+
+            <TextView
+                android:id="@+id/txtAmount6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll7"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp">
+
+
+            <EditText
+                android:id="@+id/member7"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Member7"
+                android:maxLength="10"
+                android:textSize="14dp" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spRelation7"/>
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spAge7"/>
+
+            <TextView
+                android:id="@+id/txtAmount7"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        </LinearLayout>
+
+
+    //cardview for percentage
+</androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:id="@+id/llResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtAmountTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_marginLeft="60dp"
+                android:layout_gravity="start"
+                android:id="@+id/btnView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save &amp; View"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"/>
+
+
+            <Button
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"/>
+                </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
